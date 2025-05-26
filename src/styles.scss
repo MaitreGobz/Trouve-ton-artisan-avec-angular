@@ -1,1 +1,103 @@
-/* You can add global styles to this file, and also import other style files */
+@use "sass:color";
+
+// Font import
+
+@font-face {
+    font-family: 'GraphikBold', sans-serif;
+    src: url(assets/fonts/Graphik-Bold.woff) format('woff');
+    src: url(assets/fonts/Graphik-Bold.ttf) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Graphik', sans-serif;
+    src: url(assets/fonts/Graphik-Regular.woff) format('woff');
+    src: url(assets/fonts/Graphik-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Variables
+
+$font-size-base: 1rem !default;
+$line-height-base: 1.5 !default;
+$spacing-unit: 1rem !default;
+
+$color-bg: #fff;
+$color-info: #f1f8fc;
+$color-primary: #0074c7;
+$color-secondary: #00497c;
+$color-text: #384050;
+$color-warning: #cd2c2e;
+$color-success: #82b864;
+
+// Global style
+
+html {
+  font-size: 100%;
+  line-height: $line-height-base;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family:'Graphik', sans-serif;
+  color: $color-text;
+  background-color: $color-bg;
+}
+
+section { 
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.625rem;
+}
+
+// Typography scale
+
+h1 { 
+    font-size: 2.188 rem; 
+}
+
+h2 { 
+    font-size: 2rem;
+}
+
+h3 { 
+    font-size: 1.563rem; 
+}
+
+h4 { 
+    font-size: 1.25rem;
+}
+
+h5 { 
+    font-size: 1rem;
+}
+
+// Link styles
+
+a {
+  color: $color-text;
+  text-decoration:none;
+
+  &:hover, &:focus {
+    color: color.adjust($color-primary, $lightness: -10%);
+    text-decoration: underline;
+  }
+}
+
+// Images
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
