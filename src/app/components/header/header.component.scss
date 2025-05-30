@@ -1,0 +1,75 @@
+// Variables
+
+$font-size-base: 1rem !default;
+$line-height-base: 1.5 !default;
+$spacing-unit: 1rem !default;
+
+$color-bg: #fff;
+$color-info: #f1f8fc;
+$color-primary: #0074c7;
+$color-secondary: #00497c;
+$color-text: #384050;
+$color-warning: #cd2c2e;
+$color-success: #82b864;
+
+
+
+.navbar {
+    position: relative;
+    background-color: $color-bg;
+    width: 100vw;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 0 .2rem .6rem rgba(0,0,0,.0793474);
+    
+        .logo {
+            display: block;
+            width: auto;
+            height: auto;
+            max-height: 6rem;
+        }
+
+        @media (max-width: 767.98px) {
+            .logo {
+                max-height: 4rem;
+            }
+        }
+        
+        .nav-link {  
+            font-size: 1.2rem;          
+            text-decoration: none;
+        }
+
+        .nav-text {
+            position: relative;
+            display: inline-block;
+            text-decoration: none;
+            color: inherit;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 0;
+                height: 2px;
+                background-color: $color-text;
+                transition: width 0.3s ease, left 0.3s ease;
+            }
+
+            &:hover::after,
+            &:focus::after {
+                left: 0;
+                width: 100%;
+            }
+        }
+
+        .dropdown-item {
+            color: $color-text;
+        }
+        
+        .form-control {
+            border-color: $color-primary;
+            border-radius: 1.2rem;
+        }
+}
