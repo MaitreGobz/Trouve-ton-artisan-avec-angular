@@ -1,0 +1,10 @@
+<section>
+    <p *ngIf="(artisans | artisanSearch: searchTerm).length === 0">
+        Aucun artisan trouvé
+    </p>
+    <div class="row">
+        <div *ngFor="let artisan of artisans | artisanSearch: searchTerm" class="col-sm-8 col-md-4 col-lg-3 mb-4">
+            <app-artisan-card [artisan]="artisan"></app-artisan-card>
+        </div>
+    </div>
+</section>
