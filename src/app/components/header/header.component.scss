@@ -62,6 +62,10 @@ $color-success: #82b864;
                 left: 0;
                 width: 100%;
             }
+
+            a.active {
+                text-decoration: underline;
+            }
         }
 
         .dropdown-item {
