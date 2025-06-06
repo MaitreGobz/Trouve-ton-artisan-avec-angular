@@ -1,0 +1,51 @@
+// Variables
+
+$font-size-base: 1rem !default;
+$line-height-base: 1.5 !default;
+$spacing-unit: 1rem !default;
+
+$color-bg: #fff;
+$color-info: #f1f8fc;
+$color-primary: #0074c7;
+$color-secondary: #00497c;
+$color-text: #384050;
+$color-warning: #cd2c2e;
+$color-success: #82b864;
+
+.footer {
+
+    background-color: $color-primary;
+    color: $color-info;
+    width: 100vw;
+    font-size: 1rem;
+    line-height: 1.65;
+    
+        .logo-footer {
+            display: block;
+            width: auto;
+            height: auto;
+        }
+
+        .phone-number {
+            color: $color-info;
+        }
+
+        .phone-image {
+            width: 30px;
+            height: 30px;
+        }
+
+        .footer-links {
+            color: $color-info;
+            display: inline-block;
+        }
+
+        .footer-socials {
+            background-color: $color-bg;
+                
+                a:hover {
+                  opacity: 0.8;
+                  transition: ease-in-out 300ms;
+                }
+        }
+}

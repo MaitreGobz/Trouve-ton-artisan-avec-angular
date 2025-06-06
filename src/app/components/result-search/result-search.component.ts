@@ -18,6 +18,7 @@ import { ArtisanCardComponent } from '../artisan-card/artisan-card.component';
   styleUrls: ['./result-search.component.scss']
 })
 export class ResultSearchComponent implements OnInit {
+  
   allArtisans: Artisan[] = [];
   searchTerm = '';
 
