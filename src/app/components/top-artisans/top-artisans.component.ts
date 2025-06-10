@@ -24,6 +24,9 @@ export class TopArtisansComponent implements OnInit {
     // On récupère la liste brute au lancement
     this.allArtisans = this.artisanService.getAll();
     this.checkViewport();
+     if (typeof window !== 'undefined') {
+      this.checkViewport();
+    }
   }
 
   prev(): void {
@@ -36,6 +39,8 @@ export class TopArtisansComponent implements OnInit {
 
   @HostListener('window:resize')
   checkViewport(): void {
-    this.isMobile = window.innerWidth < 768;
-}
+    if (typeof window !== 'undefined') {
+      this.isMobile = window.innerWidth < 768;
+    }
+  }
 }

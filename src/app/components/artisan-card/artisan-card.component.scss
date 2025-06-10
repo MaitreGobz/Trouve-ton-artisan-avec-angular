@@ -14,10 +14,9 @@ $color-success: #82b864;
 
 
 .card {
-  border: 1px solid $color-secondary;
-  &:focus-within {
-    outline: 3px solid $color-primary;
-  }
+  background-color: $color-info;
+  border: 2px solid $color-primary;
+  color: $color-text;
 
   .star-rating {
     font-size: 1.25rem;
@@ -39,6 +38,26 @@ $color-success: #82b864;
     color: $color-success;
   }
   
+  .btn-details {
+    background-color: $color-bg;
+    border-color: $color-secondary;
+    border-radius: 1rem;
+    width: fit-content;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.card.hovered {
+  border-color: $color-secondary !important;
+  border: 3px solid !important;
+
+  .btn-details {
+    background-color: $color-primary !important;
+    color: $color-info !important;
+    text-decoration: none !important;
+  }
 }
 
 
