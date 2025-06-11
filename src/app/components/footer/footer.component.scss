@@ -48,4 +48,13 @@ $color-success: #82b864;
                   transition: ease-in-out 300ms;
                 }
         }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            font-size: 2.5rem;
+            border-radius: 50%;
+        }
 }
