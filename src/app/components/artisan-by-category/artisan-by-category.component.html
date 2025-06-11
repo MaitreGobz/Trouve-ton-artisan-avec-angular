@@ -1,12 +1,10 @@
 <section class="contiainer my-4">
-    <h1 class="mb-4 text-capitalise">{{rawCategoryName}}</h1>
+    <h1 class="mt-3 mb-4 text-capitalise">{{rawCategoryName}}</h1>
     <p *ngIf="filteredArtisans.length === 0" class="text-muted">
         Aucun artisan dans la catégorie « {{rawCategoryName}} » 
     </p>
     <div class="row">
-        <div 
-            *ngFor="let artisan of filteredArtisans" 
-            class="col-sm-8 col-md-4 col-lg-3 mb-4">
+        <div *ngFor="let artisan of filteredArtisans" class="col-sm-12 col-md-4 col-lg-3 mb-4">
             <app-artisan-card [artisan]="artisan"></app-artisan-card>
         </div>
     </div>
