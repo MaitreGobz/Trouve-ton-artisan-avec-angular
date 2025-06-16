@@ -7,16 +7,7 @@
             <strong>Note :</strong>
             {{ artisan.note}}
         </p>
-        <div class="star-rating mb-3" role="img" [attr.aria-label]="'Note : ' + artisan.note + ' sur 5'">
-            <ng-container *ngFor="let _ of stars; let i = index">
-                <span class="stars-outer" aria-hidden="true">
-                    ★
-                    <span class="stars-inner" [ngStyle]="{ width: getStarFill(i) + '%'}">
-                        ★
-                    </span>
-                </span>
-            </ng-container>
-        </div>
+        <app-star-rank [note]="artisan.note"></app-star-rank>
         <p class="mb-2">
             <strong>Spécialité :</strong>
             {{ artisan.specialty}}
@@ -26,7 +17,7 @@
             {{ artisan.location}}
         </p>
         <button class="btn-details mx-auto">
-            <a class="btn-details" href="#">
+            <a class="btn-details" [routerLink]="['/details', artisan.id, slugify(artisan.name)]" [attr.aria-label]="'Voir les détails de ' + artisan.name">
                 Détails
             </a>
         </button>

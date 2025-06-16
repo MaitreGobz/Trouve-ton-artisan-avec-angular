@@ -11,7 +11,7 @@ import { ArtisanCardComponent } from '../artisan-card/artisan-card.component';
   templateUrl: './artisans-page.component.html',
   styleUrl: './artisans-page.component.scss'
 })
-export class ArtisansPageComponent {
+export class ArtisansPageComponent implements OnInit {
   artisans: Artisan [] = [];
   
   constructor(private artisanService: ArtisanService) {}
