@@ -1,0 +1,10 @@
+<div class="star-rating mb-3" role="img" [attr.aria-label]="'Note : ' + note + ' sur 5'">
+    <ng-container *ngFor="let _ of stars; let i = index">
+        <span class="stars-outer" aria-hidden="true">
+            ★
+            <span class="stars-inner" [ngStyle]="{ width: getStarFill(i) + '%'}">
+                ★
+            </span>
+        </span>
+    </ng-container>
+</div>

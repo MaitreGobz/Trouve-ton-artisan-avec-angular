@@ -1,0 +1,35 @@
+<section class="details-artisan container my-4" *ngIf="artisan as artisan">
+    <div class="d-inline-block border-top border-5 border-primary w-1r"></div>
+    <h1 class="mt-3 mb-4">Fiche d'artisan</h1>
+    <div class="container infos-div text-center border border-2 border-primary border-opacity-50 rounded-5 ms-md-5 px-md-5 py-4 my-4">
+        <h2 class="text-center" id="artisan-title-{{ artisan.id }}"> 
+            {{artisan.name}} 
+        </h2>
+        <p class="mb-2">
+            <strong>Note :</strong>
+            {{ artisan.note}}
+        </p>
+        <app-star-rank [note]="artisan.note"></app-star-rank>
+        <p class="mb-2">
+            <strong>Spécialité :</strong>
+            {{ artisan.specialty}}
+        </p>
+        <p class="mb-2">
+            <strong>Localisation :</strong>
+            {{ artisan.location}}
+        </p>
+        <p class="mb-3" *ngIf="artisan.website">
+            <strong>Site Web :</strong>
+            <a [href]="artisan.website" target="_blank" rel="noopener">
+                {{artisan.website}}
+            </a>
+        </p>
+        <p class="mb-2">
+            <strong>A propos :</strong>
+            {{artisan.about}}
+        </p>
+    </div>
+    <div>
+        <app-contact-form></app-contact-form>
+    </div>    
+</section>

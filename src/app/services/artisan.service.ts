@@ -4,9 +4,15 @@ import { Artisan } from '../models/artisan.model';
 
 @Injectable({ providedIn: 'root' })
 export class ArtisanService {
+  private artisans: Artisan[] = artisanData;
 
   // Retourne la liste complète des artisans
   getAll(): Artisan[] {
-    return artisanData;
+    return this.artisans;
+  }
+
+  // Retourne les artisans par 'id'
+  getArtisanById(id:number): Artisan | undefined{
+    return this.artisans.find(a => a.id === id);
   }
 }

@@ -1,0 +1,40 @@
+<section class="contact-form container my-4">
+    <div class="row align-items-center justify-content-between">
+        <div class="col-12 col-md-6 order-1 order-md-2 text-center text-md-end mb-3 mb-md-0">
+            <img  class="img-fluid img-section" src="assets/images/img_section_contact.png" alt="Image de la section contact généré par chatGPT">
+        </div>
+        <div class="d-inline-block border-top border-5 mt-5 border-primary w-1r"></div>
+        <h2 class="mt-3 mb-4 p-0">Contactez cet artisan</h2>
+        <div class="col-12 col-md-5 order-2 order-md-1 me-1">
+            <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" novalidate>
+                <div>
+                    <label for="userName" class="form-label mt-2">Nom</label>
+                    <input type="text" id="userName" placeholder="Votre Nom" name="user_name" class="form-control" [(ngModel)]="form.user_name" required />
+                </div>
+                <div>
+                    <label for="userEmail" class="form-label mt-2">Email</label>
+                    <input type="text" id="userEmail" placeholder="Votre email" name="user_email" class="form-control" [(ngModel)]="form.user_email" required />
+                </div>  
+                <div>
+                    <label for="userSubject" class="form-label mt-2">Objet</label>
+                    <input type="text" id="userSubject" placeholder="Objet de votre message" name="user_subject" class="form-control" [(ngModel)]="form.user_subject" required />
+                </div>  
+                <div>
+                    <label for="message" class="form-label mt-2">Message</label>
+                    <textarea type="text" id="message" placeholder="Votre message" name="message" rows="5" class="form-control" [(ngModel)]="form.message" required></textarea>
+                </div>
+                <div class="g-recaptcha mt-2" id="recaptcha-container" [attr.data-sitekey]="siteKey">
+                </div>
+                <button type="submit" class="btn btn-submit mt-3" [disabled]="contactForm.invalid">
+                    Soumettre
+                </button>
+                <div *ngIf="success" class="alert alert-success mt-3">
+                    Message envoyé!
+                </div>
+                <div *ngIf="error" class="alert alert-danger mt-3">
+                    {{error}}
+                </div>    
+            </form>
+        </div>
+    </div>
+</section>

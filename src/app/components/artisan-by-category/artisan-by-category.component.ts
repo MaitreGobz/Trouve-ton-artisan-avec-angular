@@ -13,7 +13,7 @@ import { ArtisanService } from '../../services/artisan.service';
   templateUrl: './artisan-by-category.component.html',
   styleUrl: './artisan-by-category.component.scss'
 })
-export class ArtisanByCategoryComponent {
+export class ArtisanByCategoryComponent implements OnInit{
 
   allArtisans: Artisan[] = [];
   filteredArtisans: Artisan[] = [];
