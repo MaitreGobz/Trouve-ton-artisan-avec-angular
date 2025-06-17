@@ -111,6 +111,10 @@ Angular CLI n'est pas fourni avec un framework de test complet par défaut. Vous
 - Accessibilité : W3C, WCAG, ARIA roles & labels
 - SASS pour styles modulaires et overrides Bootstrap
 
+## Hébergement
+
+Ce projet est hébergé par alwaydata à l'adresse suivante : [https://touve-ton-artisan.alwaysdata.net/](https://touve-ton-artisan.alwaysdata.net/)
+
 ## Ressources supplémentaires
 
 Pour plus d'informations sur l'utilisation de l'Angular CLI, y compris des références de commandes détaillées, visitez la page [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli).
