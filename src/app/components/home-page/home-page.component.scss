@@ -14,7 +14,6 @@ $color-success: #82b864;
 
 
 .home-page {
-    margin: 10vh;
     h1 {
         font-weight: 700;
         color: $color-secondary;
@@ -39,8 +38,16 @@ $color-success: #82b864;
     ol {
         background-color: $color-info;
     }
-    img {
+    .icon-tuto {
         width: 100px;
         height: 100px;
+    }
+    .banniere-home {
+        display: block;
+        width: 100vw;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        max-height: 400px;
     }
 }
