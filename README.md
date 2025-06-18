@@ -113,7 +113,7 @@ Angular CLI n'est pas fourni avec un framework de test complet par défaut. Vous
 
 ## Hébergement
 
-Ce projet est hébergé par alwaydata à l'adresse suivante : [https://touve-ton-artisan.alwaysdata.net/](https://touve-ton-artisan.alwaysdata.net/)
+Ce projet est hébergé par alwaydata à l'adresse suivante : [https://maitregobz.github.io/Trouve-ton-artisan-avec-angular/](https://maitregobz.github.io/Trouve-ton-artisan-avec-angular/)
 
 ## Ressources supplémentaires
 
